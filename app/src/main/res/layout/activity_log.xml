@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/logScrollView"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <!-- App Name and Back Button -->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="16dp">
+            <ImageButton
+                android:id="@+id/back_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/white"
+                android:src="@drawable/ic_arrow_back"
+                app:tint="@color/black"
+                android:background="@null"/>
+            <TextView
+                android:id="@+id/app_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                tools:text=" App name"
+                android:textAppearance="?attr/textAppearanceHeadline6"
+                android:textStyle="bold"
+                android:layout_centerHorizontal="true"
+                android:layout_marginStart="16dp"
+                android:layout_toEndOf="@id/back_button"/>
+        </RelativeLayout>
+
+
+
+
+        <!-- Folders Accessed Log -->
+        <TextView
+            android:id="@+id/folders_accessed_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAppearance="?attr/textAppearanceSubtitle1"
+            android:textStyle="bold"
+            android:text="@string/folders_accessed_by_the_app"
+            android:paddingStart="16dp"
+            android:paddingTop="16dp"
+            android:paddingEnd="16dp"/>
+
+
+        <!-- Permissions Log -->
+
+
+        <ListView
+            android:id="@+id/folders_accessed_list"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="8dp" />
+
+        <LinearLayout android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:id="@+id/empty_view"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/empty_view_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="16dp"
+                tools:text="@string/no_folders_accessed_message"
+                android:text="@string/no_folders_accessed_message"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                />
+
+        </LinearLayout>
+
+
+        <TextView
+            android:id="@+id/permissions_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAppearance="?attr/textAppearanceSubtitle1"
+            android:textStyle="bold"
+            android:text="@string/permissions_accessed_by_the_app"
+            android:padding="16dp" />
+
+        <LinearLayout
+            android:id="@+id/log_container"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="16dp"/>
+
+        <!-- Block Button -->
+        <Button
+            android:id="@+id/save_app_logs"
+            android:layout_width="match_parent"
+            android:layout_marginEnd="32dp"
+            android:padding="16dp"
+            android:layout_marginStart="32dp"
+            android:layout_height="wrap_content"
+            android:text="@string/save_app_log_file"
+            android:layout_gravity="center_horizontal"
+            android:layout_margin="16dp"/>
+
+    </LinearLayout>
+
+</ScrollView>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/activity_app_list"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- Search bar -->
+    <androidx.appcompat.widget.SearchView
+        android:id="@+id/search_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:queryHint="@string/search_hint"
+        android:iconifiedByDefault="false"
+        android:layout_margin="16dp"
+        android:background="@drawable/search_background"/>
+
+
+    <ListView
+        android:id="@+id/other_list_view"
+        android:layout_width="match_parent"
+        android:layout_below="@id/search_view"
+
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:padding="8dp" />
+
+    <ListView
+        android:id="@+id/system_list_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/other_list_view"
+        android:layout_alignParentStart="true"
+        android:padding="8dp" />
+
+
+</RelativeLayout>
